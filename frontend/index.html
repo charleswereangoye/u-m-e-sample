@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Mobility Data Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Urban Mobility Data Explorer</h1>
+            <p>New York City Taxi Trip Analysis</p>
+        </header>
+
+        <div class="kpi-card">
+            <h2>Total Trips</h2>
+            <div id="totalTrips" class="stat-value">7,586,340</div>
+        </div>
+
+        <div class="chart-card">
+            <h2>Trips by Borough</h2>
+            <div class="chart-container">
+                <canvas id="boroughChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

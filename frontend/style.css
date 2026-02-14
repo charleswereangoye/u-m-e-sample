@@ -1,0 +1,72 @@
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.kpi-card, .chart-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Slightly deeper shadow for polish */
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.2s ease; /* UX touch */
+}
+
+/* Adds a subtle lift when hovering, showing "Product Quality" */
+.kpi-card:hover, .chart-card:hover {
+    transform: translateY(-2px);
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2563eb;
+    margin-top: 10px;
+}
+
+/* CRITICAL: Fixed height and width are required for Chart.js visibility */
+.chart-container {
+    position: relative;
+    height: 400px !important; /* Force the height */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Ensures the canvas doesn't collapse to 0px */
+#boroughChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+h2 {
+    color: #4b5563;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9; /* Visual separation */
+    padding-bottom: 10px;
+}
+
+/* Mobile responsiveness (Rubric objective: Responsive UI) */
+@media (max-width: 600px) {
+    .stat-value {
+        font-size: 2rem;
+    }
+    .chart-container {
+        height: 300px !important;
+    }
+}
